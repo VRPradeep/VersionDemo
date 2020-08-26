@@ -1,0 +1,9 @@
+
+#define getTrendSentence(yearlySalesList)[[
+years=map(yearlySalesList,x->asNumber(x[0]));
+global.beginningYear=years[0];
+global.latestYear=years[len(years)-1];
+sales=map(yearlySalesList,x->x[1]);
+global.trend=map(sales,x->simpleTrend( sales, indexOf( sales, x ), 'Increased', 'Decreased'));
+global.yearsFiltered=map(filter(years,x->x!=asNumber(latestYear)),y->asNumber(y));'']]
+[[list=zip(yearsFiltered,trend);getTrendNarrative(list)]]

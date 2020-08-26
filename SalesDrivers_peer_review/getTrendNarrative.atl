@@ -1,0 +1,6 @@
+
+#define getTrendNarrative(trendList)[[
+trend=map(trendList,x->x[1]);
+global.years=map(trendList,x->x[0]);
+global.increaseTrend=filter(trend,x->x=='Increased');
+global.decreaseTrend=filter(trend,x->x=='Decreased');'']][[if(len(increaseTrend)==len(years)){There was an increasing trend from [[numberFormat(yearBeginning,'####')]] to [[numberFormat(latestYear,'####')]].} elseif(len(decreaseTrend)==len(years)){There was &nbsp;decreasing trend from [[numberFormat(yearBeginning,'####')]] to [[numberFormat(latestYear,'####')]].} else{Varying Trend : [[pairwiseMap(years,trend,(x,y)->"[[numberFormat(x,'####')]] to [[numberFormat(x+1,'####')]] - [[y]]")]]}]]

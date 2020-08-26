@@ -1,0 +1,24 @@
+
+#define simpleTrend( a, b, positiveWording, negativeWording )[[<span style="color: rgb(169, 169, 169);">//Calculate simple trend
+</span>
+<span style="color: rgb(128, 128, 128);"><strong>//Trap If Null Values Passed In and Use Test Values Instead</strong></span>
+<span style="color: rgb(169, 169, 169);">if ( a == null ){[[a = makeList( 10, 3, 5, 8, 2, 1 )]]}
+if ( b == null ){[[b = 0]]}
+if ( positiveWording == null){[[positiveWording = 'increased']]}
+if ( negativeWording == null){[[negativeWording = 'decreased']]}
+</span>
+<span style="color: rgb(211, 211, 211);">/*
+Example Usage:
+&nbsp; &nbsp;list1 = makeList( 10, 3, 5, 8, 2, 1)
+&nbsp; &nbsp;map( list1, x -> simpleTrend( list1, indexOf( list1, x ), 'Increased', 'Decreased' )</span>
+<span style="color: rgb(211, 211, 211);">&nbsp; &nbsp;Example Result that this Function will Return Using Defaults above: 'Decreased'&nbsp;</span>
+<span style="color: rgb(211, 211, 211);">&nbsp; &nbsp; &nbsp; (that is, when comparing Index 0 and its Next Index, which is 10 and 3 in the list, then 3 was a Decrease from 10)</span>
+<span style="color: rgb(211, 211, 211);">
+Last Updated:
+&nbsp; &nbsp;03/03/2020 (Pradeep) - Update Notes: Shared
+&nbsp; &nbsp;03/23/2020 (Shadi) - Update Notes: Added this versioning line, Mod with Comments, Mod with Positive/Negative Parameters, Mod with Null traps
+*/
+</span>
+<strong><span style="color: rgb(0, 128, 0);">//Calculate and Return the Trend ( Negative or Positive Direction Between the Specified Index Value and the Next Index Value After )&nbsp;</span></strong>
+if ( b < ( len( a ) - 1 ) ){[[( a[b] > a[b + 1] ) ? ( negativeWording ) : ( positiveWording )]]}
+]]

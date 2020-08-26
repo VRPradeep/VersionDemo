@@ -1,0 +1,9 @@
+
+#define productNarrative(result) [[if (products_desc[0][0]!=asString(result.product)){[[
+"[[result.product]]
+<u>Yearly Trend Report:&nbsp;</u>
+<strong>Actual Sales&nbsp;</strong> [[result.trend]]
+
+"]]} else {[[topProductNarrative(result)]]}]]
+
+

@@ -1,0 +1,6 @@
+
+#define topProductNarrative(result) [[
+"[[result.product]]
+<u>Yearly Trend Report:</u>&nbsp;
+<strong>Actual sales&nbsp;</strong> [[result.trend]]
+"]]
