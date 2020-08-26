@@ -21173,7 +21173,7 @@
   "templates": [
     {
       "id": "Main",
-      "value": "<p>[[overviewNarrative]]<br><br>[[products_desc=top(products_desc,numInsightsByThreshold(map(products_desc,x-&gt;x[1])));<br>//products_desc=top(products_desc,numInsightsBySD(map(products_desc,x-&gt;x[1])));<br>country_results=map(products_desc,x-&gt;countryAnalytics(filter(data,y-&gt;y[product_idx]==x[0])));<br>forAll(country_results,x-&gt;productNarrative(x))]]</p>",
+      "value": "<p>[[overviewNarrative]]<br><br>[[products_desc=top(products_desc,numInsightsByThreshold(map(products_desc,x-&gt;x[1])));<br>//products_desc=top(products_desc,numInsightsBySD(map(products_desc,x-&gt;x[1])));<br>country_results=map(products_desc,x-&gt;countryAnalytics(filter(data,y-&gt;y[product_idx]==x[0])));<br>forAll(country_results,x-&gt;productNarrative(x))]].</p><p><br></p><p>Testing it for gitversion control.</p>",
       "postProcessors": [
         {
           "postProcessorId": "PP01",
@@ -21181,7 +21181,7 @@
         }
       ],
       "createdDate": "2020-08-09T16:25:33.797",
-      "updatedDate": "2020-08-25T17:13:53.688"
+      "updatedDate": "2020-08-26T12:58:02.176"
     },
     {
       "id": "columnIdx",
