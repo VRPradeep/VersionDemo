@@ -21248,6 +21248,12 @@
       "value": "<p>#define getTrendNarrative(trendList)[[<br>trend=map(trendList,x-&gt;x[1]);<br>global.years=map(trendList,x-&gt;x[0]);<br>global.increaseTrend=filter(trend,x-&gt;x=='Increased');<br>global.decreaseTrend=filter(trend,x-&gt;x=='Decreased');'']][[if(len(increaseTrend)==len(years)){There was an increasing trend from [[numberFormat(yearBeginning,'####')]] to [[numberFormat(latestYear,'####')]].} elseif(len(decreaseTrend)==len(years)){There was &nbsp;decreasing trend from [[numberFormat(yearBeginning,'####')]] to [[numberFormat(latestYear,'####')]].} else{Varying Trend : [[pairwiseMap(years,trend,(x,y)-&gt;\"[[numberFormat(x,'####')]] to [[numberFormat(x+1,'####')]] - [[y]]\")]]}]]</p>",
       "createdDate": "2020-08-24T16:43:46.681",
       "updatedDate": "2020-08-24T16:55:17.978"
+    },
+    {
+      "id": "NewScript",
+      "value": "<p>This is the script to check the git functionality.</p>",
+      "createdDate": "2020-08-27T14:25:17.982",
+      "updatedDate": "2020-08-27T14:25:32.85"
     }
   ],
   "lexRuleFiles": [],
@@ -21380,7 +21386,8 @@
         "analytics",
         "narrative",
         "functions",
-        "trend"
+        "trend",
+        "NewScript"
       ]
     }
   ],
